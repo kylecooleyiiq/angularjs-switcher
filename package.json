@@ -1,10 +1,10 @@
 {
-	"name": "angular2-switcher",
-	"publisher": "infinity1207",
+	"name": "angularjs-switcher",
+	"publisher": "kylecooleyiiq (original for typescript/angular2 by infinity1207)",
 	"icon": "images/logo.png",
-	"displayName": "angular2-switcher",
-	"description": "Easily navigate to `typescript`|`template`|`style` in angular2 project.",
-	"version": "0.3.4",
+	"displayName": "angularjs-switcher",
+	"description": "Easily navigate to `javascript`|`template`|`style` in angularjs project.",
+	"version": "0.3.5",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -16,7 +16,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/infinity1207/angular2-switcher"
+		"url": "https://github.com/kylecooleyiiq/angularjs-switcher"
 	},
 	"main": "./out/extension.js",
 	"contributes": {
@@ -31,7 +31,7 @@
 			},
 			{
 				"command": "extension.switchTs",
-				"title": "Open corresponding typescript file"
+				"title": "Open corresponding javascript file"
 			},
 			{
 				"command": "extension.switchSpec",
@@ -82,7 +82,7 @@
 							".less",
 							".css"
 						],
-						"description": "The order of angular2-switcher find corresponding style file."
+						"description": "The order of angularjs-switcher find corresponding style file."
 					}
 				}
 			},
@@ -94,7 +94,7 @@
 						"default": [
 							".html"
 						],
-						"description": "The order of angular2-switcher find corresponding template file."
+						"description": "The order of angularjs-switcher find corresponding template file."
 					}
 				}
 			}
@@ -114,8 +114,8 @@
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
 		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
 	}
 }

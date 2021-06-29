@@ -7,6 +7,9 @@ let openSideBySide = vscode.workspace.getConfiguration("angular2-switcher").get<
 let styleFormats = vscode.workspace.getConfiguration("angular2-switcher").get<string[]>("styleFormats")!;
 let templateFormats = vscode.workspace.getConfiguration("angular2-switcher").get<string[]>("templateFormats")!;
 
+let langType = ".js";
+let specType = `.spec${langType}`;
+
 export function activate(context: vscode.ExtensionContext) {
     let switchTemplateCommand = vscode.commands.registerCommand('extension.switchTemplate', switchTemplate);
     context.subscriptions.push(switchTemplateCommand);
@@ -47,10 +50,10 @@ async function switchTemplate() {
             if (previous.startsWith(fileNameWithoutExtension)) {
                 openFile(previous);
             } else {
-                openCorrespondingFile(fileNameWithoutExtension, ".ts");
+                openCorrespondingFile(fileNameWithoutExtension, langType);
             }
         } else {
-            openCorrespondingFile(fileNameWithoutExtension, ".ts");
+            openCorrespondingFile(fileNameWithoutExtension, langType);
         }
     }
 }
@@ -64,7 +67,7 @@ async function switchTs() {
     let fileNameWithoutExtension = getFileNameWithoutExtension(currentFile);
 
     if (fileIsStyle(currentFile) || fileIsTemplate(currentFile) || fileIsSpec(currentFile)) {
-        openCorrespondingFile(fileNameWithoutExtension, ".ts");
+        openCorrespondingFile(fileNameWithoutExtension, langType);
     }
     else if (fileIsTs(currentFile)) {
         if (previous && previous !== currentFile) {
@@ -112,17 +115,17 @@ async function switchSpec() {
     let fileNameWithoutExtension = getFileNameWithoutExtension(currentFile);
 
     if (fileIsTs(currentFile) || fileIsStyle(currentFile) || fileIsTemplate(currentFile)) {
-        openCorrespondingFile(fileNameWithoutExtension, ".spec.ts");
+        openCorrespondingFile(fileNameWithoutExtension, specType);
     }
     else if (fileIsSpec(currentFile)) {
         if (previous && previous !== currentFile) {
             if (previous.startsWith(fileNameWithoutExtension)) {
                 openFile(previous);
             } else {
-                openCorrespondingFile(fileNameWithoutExtension, ".ts");
+                openCorrespondingFile(fileNameWithoutExtension, langType);
             }
         } else {
-            openCorrespondingFile(fileNameWithoutExtension, ".ts");
+            openCorrespondingFile(fileNameWithoutExtension, langType);
         }
     }
 }
@@ -172,9 +175,9 @@ function fileIsTs(path: string) {
     if (fileIsSpec(path)) {
         return false;
     }
-    return fileIs(path, ".ts");
+    return fileIs(path, langType);
 }
 
 function fileIsSpec(path: string) {
-    return fileIs(path, ".spec.ts");
+    return fileIs(path, specType);
 }
