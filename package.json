@@ -64,7 +64,7 @@
 			{
 				"title": "Side by side",
 				"properties": {
-					"angular2-switcher.openSideBySide": {
+					"angularjs-switcher.openSideBySide": {
 						"type": "boolean",
 						"default": false,
 						"description": "Open files side by side."
@@ -74,7 +74,7 @@
 			{
 				"title": "Style formats",
 				"properties": {
-					"angular2-switcher.styleFormats": {
+					"angularjs-switcher.styleFormats": {
 						"type": "array",
 						"default": [
 							".scss",
@@ -89,7 +89,7 @@
 			{
 				"title": "Template formats",
 				"properties": {
-					"angular2-switcher.templateFormats": {
+					"angularjs-switcher.templateFormats": {
 						"type": "array",
 						"default": [
 							".html"

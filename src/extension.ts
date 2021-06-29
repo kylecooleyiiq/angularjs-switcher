@@ -3,9 +3,9 @@ import { fileIs, getFileNameWithoutExtension } from "./common";
 import { TemplateDefinitionProvider } from "./template-definition-provider";
 
 let previous = "";
-let openSideBySide = vscode.workspace.getConfiguration("angular2-switcher").get<boolean>("openSideBySide")!;
-let styleFormats = vscode.workspace.getConfiguration("angular2-switcher").get<string[]>("styleFormats")!;
-let templateFormats = vscode.workspace.getConfiguration("angular2-switcher").get<string[]>("templateFormats")!;
+let openSideBySide = vscode.workspace.getConfiguration("angularjs-switcher").get<boolean>("openSideBySide")!;
+let styleFormats = vscode.workspace.getConfiguration("angularjs-switcher").get<string[]>("styleFormats")!;
+let templateFormats = vscode.workspace.getConfiguration("angularjs-switcher").get<string[]>("templateFormats")!;
 
 let langType = ".js";
 let specType = `.spec${langType}`;
