@@ -1,9 +1,9 @@
 {
 	"name": "angularjs-switcher",
-	"publisher": "kylecooleyiiq (original for typescript/angular2 by infinity1207)",
+	"publisher": "kylecooleyiiq",
 	"icon": "images/logo.png",
 	"displayName": "angularjs-switcher",
-	"description": "Easily navigate to `javascript`|`template`|`style` in angularjs project.",
+	"description": "Easily navigate to `javascript`|`template`|`style` in angularjs project. (Forked from switcher for typescript/angular2 by infinity1207)",
 	"version": "0.3.5",
 	"engines": {
 		"vscode": "^1.41.0"
